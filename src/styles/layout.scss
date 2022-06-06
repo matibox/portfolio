@@ -1,0 +1,36 @@
+header {
+    height: 100vh;
+    position: relative;
+}
+
+.header-top {
+    width: 100%;
+    margin-top: 2.5rem;
+    padding-inline: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5%;
+
+    &__logo-wrapper {
+        height: 100%;
+        aspect-ratio: 1;
+
+        & > img {
+            height: 100%;
+        }
+    }
+
+    &__menu-wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.hero {
+    height: 95%;
+    width: 100%;
+    padding-inline: 2.5rem;
+}

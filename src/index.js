@@ -6,9 +6,14 @@ import setAnimations from './animations';
 setAnimations();
 
 // Assets
-/*
-import Logo from './assets/Logo.svg';
+import assets from './assets';
+assets();
 
-const logo = document.querySelector('[data-logo]');
-logo.src = Logo;
-*/
+// Mobile menu
+const button = document.querySelector('[data-burger]');
+const menu = document.querySelector('[data-mobile-menu]');
+
+button.addEventListener('click', () => {
+    menu.classList.toggle('header-top__mobile-menu--active');
+    button.classList.toggle('header-top__burger--active');
+});

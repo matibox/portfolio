@@ -7,7 +7,49 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <img data-logo alt="">
-    <h2>AAAA</h2>
+    <header>
+        <div class="header-top">
+            <div class="header-top__logo-wrapper">
+                <img data-logo alt="logo">
+            </div>
+            <div class="header-top__menu-wrapper">
+                <button data-burger class="header-top__burger">
+                    <img data-burger-img alt="open menu" class="header-top__burger-open">
+                    <img data-x-img alt="close menu" class="header-top__burger-close">
+                </button>
+                <div data-mobile-menu class="header-top__mobile-menu">
+                    <ol class="header-top__list">
+                        <li class="header-top__list-item">
+                            <a href="#about" class="header-top__list-link">About</a>
+                        </li>
+                        <li class="header-top__list-item">
+                            <a href="#skills" class="header-top__list-link">Skills</a>
+                        </li>
+                        <li class="header-top__list-item">
+                            <a href="#projects" class="header-top__list-link">Projects</a>
+                        </li>
+                        <li class="header-top__list-item">
+                            <a href="#contact" class="header-top__list-link">Contact</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="hero">
+            <div class="hero__headings-wrapper">
+                <h2 class="hero__intro">Hi, my name is</h2>
+                <h1 class="hero__name">Mateusz Hladky<span class="dot">.</span></h1>
+                <h2 class="hero__info">Starting Frontend Developer.</h2>
+            </div>
+            <p class="hero__paragraph">
+                Welcome to my portfolio! I am a high school student. Programming is my big passion. Currently, I'm working in HTML, CSS or SASS, and JS. In the future, I want to master JS and then learn frameworks like React or Angular.
+            </p>
+            <a href="#about" class="hero__button">
+                ABOUT ME
+            </a>
+        </div>
+    </header>
+    <main></main>
+    <footer></footer>
 </body>
 </html>

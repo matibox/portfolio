@@ -1,0 +1,93 @@
+// ==== BURGER MENU ====
+.header-top {
+    &__burger {
+        all: unset;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        width: 3.7rem;
+        height: 3rem;
+    }
+
+    &__burger-open,
+    &__burger-close {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__burger-open {
+        @include burgerActive;
+        transition: all 0.35s ease;
+    }
+
+    &__burger--active &__burger-open {
+        @include burgerDisabled;
+    }
+
+    &__burger-close {
+        @include burgerDisabled;
+        transition: all 0.35s ease;
+    }
+
+    &__burger--active &__burger-close {
+        @include burgerActive;
+    }
+
+    &__mobile-menu {
+        width: 66vw;
+        background-color: var(--background-dark-color);
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: all 0.2s ease-out;
+
+        &--active {
+            visibility: visible;
+            transform: translate(0);
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 60%;
+        list-style: none;
+        counter-reset: item;
+    }
+
+    &__list-item {
+        counter-increment: item;
+        font-size: 2rem;
+
+        &::before {
+            @include text-gradient;
+            content: counter(item) '.';
+            font-family: 'Lato', sans-serif;
+            font-size: 0.75em;
+        }
+    }
+
+    &__list-link {
+        @include text-gradient;
+        background-image: linear-gradient(
+            to right,
+            var(--heading-color),
+            var(--heading-color)
+        );
+        transition: background-image 0.2 ease;
+
+        &:hover {
+            @include text-gradient;
+        }
+    }
+}

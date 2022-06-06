@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400;700&display=swap');
+
+:root {
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Montserrat', 'Lato', sans-serif;
+    overflow-x: hidden;
+}
