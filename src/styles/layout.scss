@@ -1,11 +1,25 @@
 header {
     height: 100vh;
     position: relative;
+    padding-top: 2.5rem;
+}
+
+.header-background {
+    background-image: linear-gradient(
+        to top,
+        var(--background-gradient-color-2) 0%,
+        var(--background-gradient-color-1) 50%
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
 }
 
 .header-top {
     width: 100%;
-    margin-top: 2.5rem;
     padding-inline: 2.5rem;
     display: flex;
     justify-content: space-between;
@@ -30,7 +44,37 @@ header {
 }
 
 .hero {
+    --gap: 3rem;
+    --button-margin-top: 7.5rem;
     height: 95%;
     width: 100%;
     padding-inline: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+
+    &__headings-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__intro {
+        font-weight: 300;
+    }
+
+    &__info {
+        font-weight: 400;
+        color: var(--heading-color-2);
+        background-clip: none;
+        background-image: none;
+    }
+
+    &__button {
+        margin-top: calc(var(--button-margin-top) - var(--gap));
+    }
 }

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> 
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
@@ -44,10 +47,12 @@
             <p class="hero__paragraph">
                 Welcome to my portfolio! I am a high school student. Programming is my big passion. Currently, I'm working in HTML, CSS or SASS, and JS. In the future, I want to master JS and then learn frameworks like React or Angular.
             </p>
-            <a href="#about" class="hero__button">
+            <a href="#about" class="hero__button button">
                 ABOUT ME
             </a>
         </div>
+        <div class="header-background"></div>
+        <img data-tilt-transition alt="" class="tilt">
     </header>
     <main></main>
     <footer></footer>

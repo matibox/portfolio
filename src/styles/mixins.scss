@@ -8,6 +8,14 @@
     color: transparent;
 }
 
+@mixin gradient {
+    background-image: linear-gradient(
+        to right,
+        var(--accent-gradient-color-1),
+        var(--accent-gradient-color-2)
+    );
+}
+
 @mixin burgerActive {
     transform: rotate(0);
     opacity: 1;
