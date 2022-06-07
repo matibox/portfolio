@@ -149,6 +149,14 @@
     @include text-gradient;
 }
 
+// ==== NUMBER ====
+.number {
+    @include text-gradient;
+    font-size: 0.5em;
+    font-family: 'Lato';
+    font-weight: 700;
+}
+
 // ==== TILT TRANSITION ====
 .tilt {
     position: absolute;

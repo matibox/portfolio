@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> 
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
@@ -54,7 +51,22 @@
         <div class="header-background"></div>
         <img data-tilt-transition alt="" class="tilt">
     </header>
-    <main></main>
+    <main>
+        <section id="about" class="about">
+            <h1 class="about__heading">
+                <span class="number">1.</span>
+                ABOUT ME
+            </h1>
+            <div class="about__text-container">
+                <p>
+                    Hello! My name is Mateusz Hladky. I am a student in a high school. I started learning programming in 2020. I always look to improve in every aspect, especially when it comes to coding. Most of the time I've spent on HTML, CSS, and JS but I also touched on some other languages like SQL. In the future, I want to master JS and start learning a front-end framework. Besides programming, I'm into volleyball, sim racing, and all kinds of motor racing - mainly Formula 1.
+                </p>
+            </div>
+            <div class="about__photo-container">
+                <img data-about-photo alt="photo" class="about__photo">
+            </div>
+        </section>
+    </main>
     <footer></footer>
 </body>
 </html>
