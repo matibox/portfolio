@@ -80,14 +80,9 @@ header {
 }
 
 .about {
-    width: 100%;
-    padding-inline: 2.5rem;
+    @include section;
     margin-top: 3.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 4rem;
+    padding-inline: 2.5rem;
 
     &__photo-container {
         align-self: center;
@@ -130,7 +125,27 @@ header {
         transition: filter 0.3s ease;
 
         &:hover {
-            filter: grayscale(0) hue-rotate(190deg);
+            filter: grayscale(0);
         }
+    }
+}
+
+.skills {
+    @include section;
+    margin-top: 8rem;
+
+    &__heading,
+    &__text-container,
+    &__sliders-container {
+        padding-inline: 2.5rem;
+    }
+
+    &__sliders-container {
+        width: 100%;
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }

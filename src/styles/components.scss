@@ -157,10 +157,83 @@
     font-weight: 700;
 }
 
-// ==== TILT TRANSITION ====
-.tilt {
+// ==== TRANSITIONS ====
+.transition {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+// ==== SKILLS GRAPH ====
+.slider {
+    &__container {
+        width: 100%;
+        height: 5.5rem;
+        // border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 2fr;
+        row-gap: 0.8rem;
+    }
+
+    &__language,
+    &__scale {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        color: var(--heading-color);
+        grid-row: 1/2;
+    }
+
+    &__language {
+        grid-column: 1/2;
+    }
+
+    &__scale {
+        grid-column: 2/3;
+        justify-self: end;
+    }
+
+    &__graph {
+        --border-radius: 1.5rem;
+        grid-column: 1/3;
+        grid-row: 2/3;
+        width: 100%;
+        height: 100%;
+        border-radius: var(--border-radius);
+        background-color: var(--heading-color);
+        position: relative;
+
+        &--10::after {
+            width: 100%;
+            border-top-right-radius: var(--border-radius) !important;
+            border-bottom-right-radius: var(--border-radius) !important;
+        }
+
+        &--8::after {
+            width: 80%;
+        }
+
+        &--7::after {
+            width: 70%;
+        }
+
+        &--5::after {
+            width: 50%;
+        }
+
+        &--3::after {
+            width: 30%;
+        }
+
+        &::after {
+            @include gradient;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+        }
+    }
 }
