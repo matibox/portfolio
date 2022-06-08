@@ -17,3 +17,21 @@ button.addEventListener('click', () => {
     menu.classList.toggle('header-top__mobile-menu--active');
     button.classList.toggle('header-top__burger--active');
 });
+
+// Graphs
+const graphs = document.querySelectorAll('[data-graph]');
+
+function setGraphWidth() {
+    graphs.forEach(graph => {
+        const width = graph.getAttribute('data-width');
+        graph.style.setProperty('--graph-width', `${width}%`);
+
+        if (width === '100') {
+            graph.classList.add('slider__graph--max');
+        } else {
+            graph.classList.remove('slider__graph--max');
+        }
+    });
+}
+
+setGraphWidth();
