@@ -4,8 +4,11 @@ h1 {
 }
 
 h2 {
-    @include text-gradient;
     font-size: 24px;
+}
+
+h2:not(.hero__info) {
+    @include text-gradient;
 }
 
 h1,
