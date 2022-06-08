@@ -7,10 +7,12 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <header>
-        <div class="header-top">
+    <header id="header">
+        <div data-navbar class="header-top">
             <div class="header-top__logo-wrapper">
-                <img data-logo alt="logo">
+                <a href="#header">
+                    <img data-logo alt="logo">
+                </a>
             </div>
             <div class="header-top__menu-wrapper">
                 <button data-burger class="header-top__burger">
@@ -20,16 +22,16 @@
                 <div data-mobile-menu class="header-top__mobile-menu">
                     <ol class="header-top__list">
                         <li class="header-top__list-item">
-                            <a href="#about" class="header-top__list-link">About</a>
+                            <a data-nav-link href="#about" class="header-top__list-link">About</a>
                         </li>
                         <li class="header-top__list-item">
-                            <a href="#skills" class="header-top__list-link">Skills</a>
+                            <a data-nav-link href="#skills" class="header-top__list-link">Skills</a>
                         </li>
                         <li class="header-top__list-item">
-                            <a href="#projects" class="header-top__list-link">Projects</a>
+                            <a data-nav-link href="#projects" class="header-top__list-link">Projects</a>
                         </li>
                         <li class="header-top__list-item">
-                            <a href="#contact" class="header-top__list-link">Contact</a>
+                            <a data-nav-link href="#contact" class="header-top__list-link">Contact</a>
                         </li>
                     </ol>
                 </div>
