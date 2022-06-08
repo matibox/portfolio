@@ -4,7 +4,10 @@ import BurgerClose from './assets/BurgerClose.svg';
 import Tilt from './assets/Tilt.svg';
 import AboutPhoto from './assets/AboutPhoto.png';
 import Wave from './assets/Wave.svg';
-import Github from './assets/Github.svg';
+import ProjectDesign from './assets/ProjectDesign.png';
+import ProjectTicTacToe from './assets/ProjectTicTacToe.png';
+import ProjectGladkobot from './assets/ProjectGladkobot.png';
+import TiltDark from './assets/TiltDark.svg';
 
 export default function assets() {
     const assets = [
@@ -14,7 +17,10 @@ export default function assets() {
         { assetName: Tilt, element: 'tilt-transition' },
         { assetName: AboutPhoto, element: 'about-photo' },
         { assetName: Wave, element: 'wave-transition' },
-        { assetName: Github, element: 'github' },
+        { assetName: ProjectDesign, element: 'project-design' },
+        { assetName: ProjectTicTacToe, element: 'project-tictactoe' },
+        { assetName: ProjectGladkobot, element: 'project-gladkobot' },
+        { assetName: TiltDark, element: 'tilt-dark-transition' },
     ];
 
     function setAssetsSource(assets) {

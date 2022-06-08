@@ -78,6 +78,13 @@ header {
     &__button {
         margin-top: calc(var(--button-margin-top) - var(--gap));
     }
+
+    &__transition {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
 }
 
 .about {
@@ -134,6 +141,7 @@ header {
 .skills {
     @include section;
     margin-top: 8rem;
+    min-height: 67rem;
 
     &__heading,
     &__text-container,
@@ -153,7 +161,11 @@ header {
 
 .projects {
     @include section;
-    padding-inline: 2.5rem;
+    background-image: linear-gradient(
+        to bottom,
+        var(--background-gradient-color-2) 0%,
+        var(--background-gradient-color-1) 50%
+    );
 
     &__container {
         width: 100%;
@@ -161,5 +173,16 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 8rem;
     }
+
+    & > *:not(.transition) {
+        padding-inline: 2.5rem;
+    }
+}
+
+.contact {
+    @include section;
+    padding-inline: 2.5rem;
+    margin-top: 5rem;
 }
