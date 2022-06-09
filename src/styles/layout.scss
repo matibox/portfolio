@@ -67,7 +67,7 @@ header {
     padding-inline: 2.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: var(--gap);
 
@@ -90,6 +90,7 @@ header {
 
     &__button {
         margin-top: calc(var(--button-margin-top) - var(--gap));
+        align-self: center;
     }
 
     &__transition {
@@ -221,7 +222,6 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
 
     &__link {
         color: var(--text-color);
@@ -246,6 +246,22 @@ header {
 
         &:hover {
             color: var(--accent-gradient-color-2);
+        }
+    }
+}
+
+@media only screen and(min-width: 800px) {
+    .header-background {
+        background-image: linear-gradient(
+            45deg,
+            var(--background-gradient-color-2) 0%,
+            var(--background-gradient-color-1) 100%
+        );
+    }
+
+    .hero {
+        &__button {
+            align-self: flex-start;
         }
     }
 }

@@ -23,8 +23,4 @@ body {
     background-color: var(--background-color);
     font-family: 'Montserrat', 'Lato', sans-serif;
     overflow-x: hidden;
-    image-rendering: crisp-edges;
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: -o-crisp-edges; /* Opera */
-    image-rendering: -webkit-optimize-contrast;
 }
