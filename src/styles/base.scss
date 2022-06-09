@@ -3,7 +3,7 @@
 :root {
     font-size: 10px;
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--navbar-height));
+    scroll-padding-top: calc(var(--navbar-height) - 1rem);
 }
 
 *,
