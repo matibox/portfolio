@@ -61,3 +61,14 @@ function setGraphWidth() {
 }
 
 setGraphWidth();
+
+// Footer date
+const footer = document.querySelector('[data-footer-text]');
+
+function setFooterDate() {
+    const date = new Date();
+    const year = date.getFullYear();
+    footer.innerHTML += ` ${year}`;
+}
+
+setFooterDate();
