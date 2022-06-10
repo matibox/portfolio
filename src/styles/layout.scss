@@ -110,7 +110,20 @@ header {
 .about {
     @include section;
     padding-top: 3.5rem;
-    padding-inline: 2.5rem;
+    padding-inline: clamp(2.5rem, 7.5vw, 13rem);
+
+    &__content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 4rem;
+
+        & > p {
+            width: 100%;
+        }
+    }
 
     &__photo-container {
         align-self: center;
@@ -122,6 +135,7 @@ header {
             )
             1;
         position: relative;
+        height: clamp(25rem, 30vw, 36rem);
 
         &::before,
         &::after {
@@ -285,6 +299,21 @@ header {
     .header-top {
         &__menu-wrapper {
             display: none;
+        }
+    }
+
+    .about {
+        &__content-container {
+            flex-direction: row;
+            justify-content: space-between;
+
+            & > p {
+                width: 50%;
+            }
+        }
+
+        &__photo-container {
+            margin-inline: auto;
         }
     }
 }
