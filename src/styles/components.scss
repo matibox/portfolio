@@ -93,6 +93,24 @@
     }
 }
 
+// ==== PC MENU ====
+.header-top-pc {
+    &__menu-wrapper {
+        height: 100%;
+        width: 50%;
+        display: none;
+    }
+
+    &__list {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        counter-reset: item;
+    }
+}
+
 // ==== BUTTON ====
 .button {
     --border-width: 1px;
@@ -296,5 +314,13 @@
         font-weight: 700;
         font-size: 1.2rem;
         text-align: right;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .header-top-pc {
+        &__menu-wrapper {
+            display: block;
+        }
     }
 }

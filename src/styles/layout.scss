@@ -281,4 +281,10 @@ header {
             width: 50%;
         }
     }
+
+    .header-top {
+        &__menu-wrapper {
+            display: none;
+        }
+    }
 }
