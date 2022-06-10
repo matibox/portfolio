@@ -188,7 +188,7 @@
 .slider {
     &__container {
         width: 100%;
-        height: 5.5rem;
+        height: clamp(5.5rem, 8vw, 7rem);
         // border: 1px solid red;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -202,6 +202,7 @@
         font-weight: 700;
         color: var(--heading-color);
         grid-row: 1/2;
+        font-size: clamp(1.5rem, 4vw, 2rem);
     }
 
     &__language {
@@ -321,6 +322,12 @@
     .header-top-pc {
         &__menu-wrapper {
             display: block;
+        }
+    }
+
+    .slider {
+        &__container {
+            width: calc(50% - 20rem);
         }
     }
 }

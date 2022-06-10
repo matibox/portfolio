@@ -180,7 +180,7 @@ header {
     &__heading,
     &__text-container,
     &__sliders-container {
-        padding-inline: 2.5rem;
+        padding-inline: clamp(2.5rem, 7.5vw, 13rem);
     }
 
     &__sliders-container {
@@ -314,6 +314,20 @@ header {
 
         &__photo-container {
             margin-inline: auto;
+        }
+    }
+
+    .skills {
+        &__text-container {
+            width: 60%;
+        }
+    }
+}
+
+@media only screen and(min-width: 1270px) {
+    .skills {
+        &__sliders-container {
+            justify-content: space-between;
         }
     }
 }
