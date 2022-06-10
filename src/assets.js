@@ -1,13 +1,13 @@
 import Logo from './assets/Logo.svg';
 import Burger from './assets/Burger.svg';
 import BurgerClose from './assets/BurgerClose.svg';
-import Tilt from './assets/Tilt.svg';
+import Tilt from './assets/Tilt.png';
 import AboutPhoto from './assets/AboutPhoto.png';
-import Wave from './assets/Wave.svg';
+import Wave from './assets/Wave.png';
 import ProjectDesign from './assets/ProjectDesign.png';
 import ProjectTicTacToe from './assets/ProjectTicTacToe.png';
 import ProjectGladkobot from './assets/ProjectGladkobot.png';
-import TiltDark from './assets/TiltDark.svg';
+import TiltDark from './assets/TiltDark.png';
 
 export default function assets() {
     const assets = [
