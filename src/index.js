@@ -15,6 +15,10 @@ setAnimations();
 import assets from './assets';
 assets();
 
+// Vertical menu
+import verticalMenu from './verticalMenu';
+verticalMenu();
+
 // Mobile menu
 const button = document.querySelector('[data-burger]');
 const menu = document.querySelector('[data-mobile-menu]');

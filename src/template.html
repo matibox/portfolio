@@ -7,7 +7,14 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <header id="header">
+    <div class="vertical-nav">
+        <a href="#header" data-vertical-link class="vertical-nav__link" data-content="Header"></a>
+        <a href="#about" data-vertical-link class="vertical-nav__link" data-content="About"></a>
+        <a href="#skills" data-vertical-link class="vertical-nav__link" data-content="Skills"></a>
+        <a href="#projects" data-vertical-link class="vertical-nav__link" data-content="Projects"></a>
+        <a href="#contact" data-vertical-link class="vertical-nav__link" data-content="Contact"></a>
+    </div>
+    <header id="header" data-section>
         <div data-navbar class="header-top">
             <div class="header-top__logo-wrapper">
                 <a href="#header">
@@ -72,7 +79,7 @@
         <img data-tilt-transition alt="" class="hero__transition">
     </header>
     <main>
-        <section id="about" class="about">
+        <section id="about" class="about" data-section>
             <h1>
                 <span class="number">1.</span>
                 ABOUT ME
@@ -86,7 +93,7 @@
                 </div>
             </div>
         </section>
-        <section id="skills" class="skills">
+        <section id="skills" class="skills" data-section>
             <h1 class="skills__heading">
                 <span class="number">2.</span>
                 SKILLS
@@ -134,7 +141,7 @@
                 </div>
             </div>
         </section>
-        <section id="projects" class="projects">
+        <section id="projects" class="projects" data-section>
             <img data-wave-transition alt="" class="transition">
             <h1 class="projects__heading">
                 <span class="number">3.</span>
@@ -207,7 +214,7 @@
             </div>
             <img data-tilt-dark-transition alt="" class="transition">
         </section>
-        <section id="contact" class="contact">
+        <section id="contact" class="contact" data-section>
             <h1>
                 <span class="number">4.</span>
                 CONTACT
