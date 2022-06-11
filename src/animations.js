@@ -1,6 +1,9 @@
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export default function setAnimations() {
+    // ==== HERO ====
     // Top nav
     gsap.from('.header-top__list-item', {
         duration: 1,
@@ -55,5 +58,71 @@ export default function setAnimations() {
         y: 50,
         delay: 4,
         ease: 'power3',
+    });
+
+    // ==== ABOUT ====
+    // Text
+    gsap.from('.about__heading, .about__text', {
+        scrollTrigger: {
+            trigger: '.about',
+            start: 'top center',
+        },
+        duration: 1,
+        opacity: 0,
+        x: -100,
+        stagger: 0.5,
+        ease: 'power3',
+    });
+
+    // Photo
+    gsap.from('.about__photo-container', {
+        scrollTrigger: {
+            trigger: '.about',
+            start: 'top center',
+        },
+        duration: 1,
+        opacity: 0,
+        x: 100,
+        delay: 1.5,
+        ease: 'power3',
+    });
+
+    // ==== SKILLS ====
+    // Text
+    gsap.from('.skills__heading, .skills__text-container', {
+        scrollTrigger: {
+            trigger: '.skills',
+            start: 'top center',
+        },
+        duration: 1,
+        opacity: 0,
+        x: -100,
+        stagger: 0.5,
+        ease: 'power3',
+    });
+
+    // Sliders text
+    gsap.from('.slider__language, .slider__scale', {
+        scrollTrigger: {
+            trigger: '.skills',
+            start: 'top center',
+        },
+        duration: 1,
+        opacity: 0,
+        y: 100,
+        stagger: 0.25,
+    });
+
+    // Sliders
+    gsap.from('.slider__graph-container', {
+        scrollTrigger: {
+            trigger: '.skills__heading',
+            start: 'top center',
+        },
+        duration: 2,
+        width: 0,
+        stagger: 0.5,
+        ease: 'power3',
+        delay: 1,
     });
 }

@@ -49,6 +49,7 @@ function stickyNavbar() {
 }
 
 // Graphs
+
 const graphs = document.querySelectorAll('[data-graph]');
 
 function setGraphWidth() {
