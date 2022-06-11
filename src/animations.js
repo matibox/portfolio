@@ -111,6 +111,7 @@ export default function setAnimations() {
         opacity: 0,
         y: 100,
         stagger: 0.25,
+        ease: 'power3',
     });
 
     // Sliders
