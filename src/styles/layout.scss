@@ -217,7 +217,7 @@ header {
 
 .contact {
     @include section;
-    padding: 5rem 2.5rem 6.5rem 2.5rem;
+    padding: 5rem clamp(2.5rem, 7.5vw, 13rem) 6.5rem clamp(2.5rem, 7.5vw, 13rem);
     background-color: var(--background-dark-color);
 
     &__button {
@@ -241,6 +241,11 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
+
+    & > p {
+        font-size: clamp(1.2rem, 2vw, 1.87rem);
+    }
 
     &__link {
         color: var(--text-color);
@@ -285,6 +290,18 @@ header {
 
         &__paragraph {
             width: 65%;
+        }
+    }
+
+    .contact {
+        gap: 6rem;
+
+        & > p {
+            width: 50%;
+        }
+
+        &__button {
+            margin-inline: inherit;
         }
     }
 }
