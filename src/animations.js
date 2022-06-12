@@ -126,4 +126,83 @@ export default function setAnimations() {
         ease: 'power3',
         delay: 1,
     });
+
+    // ==== PROJECTS ====
+    // Project titles
+    const projectTitles = gsap.utils.toArray('.project__title');
+    projectTitles.forEach(title => {
+        gsap.from(title, {
+            scrollTrigger: {
+                trigger: title,
+                start: 'top-=150 center',
+            },
+            x: -100,
+            opacity: 0,
+            duration: 1,
+            ease: 'power3',
+        });
+    });
+
+    // Project images
+    const projectImages = gsap.utils.toArray('.project__image');
+    projectImages.forEach(image => {
+        gsap.from(image, {
+            scrollTrigger: {
+                trigger: image,
+                start: 'top-=150 center',
+            },
+            x: -100,
+            opacity: 0,
+            duration: 1,
+            delay: 0.5,
+            ease: 'power3',
+        });
+    });
+
+    // Project captions
+    const projectCaptions = gsap.utils.toArray('.project__image-caption');
+    projectCaptions.forEach(caption => {
+        gsap.from(caption, {
+            scrollTrigger: {
+                trigger: caption,
+                start: 'top-=400 center',
+            },
+            yPercent: 100,
+            opacity: 0,
+            duration: 1,
+            delay: 1.5,
+            ease: 'power3',
+        });
+    });
+
+    // Project descriptions
+    const projectDescriptions = gsap.utils.toArray('.project__description');
+    projectDescriptions.forEach(description => {
+        gsap.from(description, {
+            scrollTrigger: {
+                trigger: description,
+                start: 'top-=150 center',
+            },
+            x: 100,
+            opacity: 0,
+            delay: 1.5,
+            ease: 'back',
+            duration: 1,
+        });
+    });
+
+    const projectIcons = gsap.utils.toArray('.project__github');
+    projectIcons.forEach(icon => {
+        gsap.from(icon, {
+            scrollTrigger: {
+                trigger: icon,
+                start: 'top-=400 center',
+                markers: true,
+            },
+            opacity: 0,
+            yPercent: 100,
+            delay: 2,
+            druation: 1,
+        });
+    });
 }
