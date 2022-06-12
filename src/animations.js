@@ -23,6 +23,15 @@ export default function setAnimations() {
         delay: 1.5,
     });
 
+    // Mobile burger
+    gsap.from('.header-top__burger', {
+        duration: 1,
+        opacity: 0,
+        x: 100,
+        ease: 'power3',
+        delay: 1.5,
+    });
+
     // Logo
     gsap.from('.header-top__logo-wrapper', {
         duration: 1,
@@ -128,6 +137,18 @@ export default function setAnimations() {
     });
 
     // ==== PROJECTS ====
+    // Projects heading
+    gsap.from('.projects__heading', {
+        scrollTrigger: {
+            trigger: '.projects__heading',
+            start: 'top-=250 center',
+        },
+        duration: 1,
+        y: 100,
+        opacity: 0,
+        ease: 'power3',
+    });
+
     // Project titles
     const projectTitles = gsap.utils.toArray('.project__title');
     projectTitles.forEach(title => {
@@ -197,12 +218,46 @@ export default function setAnimations() {
             scrollTrigger: {
                 trigger: icon,
                 start: 'top-=400 center',
-                markers: true,
             },
             opacity: 0,
             yPercent: 100,
             delay: 2,
             druation: 1,
         });
+    });
+
+    // ==== CONTACT ====
+    gsap.from('.contact__heading, .contact__paragraph, .contact__button', {
+        scrollTrigger: {
+            trigger: '.project__transition-dark',
+            start: 'top center',
+        },
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.5,
+    });
+
+    // ==== FOOTER ====
+    gsap.from('.footer__text', {
+        scrollTrigger: {
+            trigger: '.contact',
+            start: 'top center',
+        },
+        opacity: 0,
+        duration: 1,
+        delay: 2,
+    });
+
+    gsap.from('.footer__socials-container > a', {
+        scrollTrigger: {
+            trigger: '.contact',
+            start: 'top center',
+        },
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        delay: 3,
+        stagger: 0.5,
     });
 }
