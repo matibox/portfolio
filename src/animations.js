@@ -206,7 +206,7 @@ export default function setAnimations() {
             },
             x: 100,
             opacity: 0,
-            delay: 1.5,
+            delay: 0.5,
             ease: 'back',
             duration: 1,
         });
@@ -221,7 +221,7 @@ export default function setAnimations() {
             },
             opacity: 0,
             yPercent: 100,
-            delay: 2,
+            delay: 1,
             druation: 1,
         });
     });
