@@ -13,16 +13,6 @@ export default function setAnimations() {
         ease: 'power3',
     });
 
-    // Vertical nav
-    gsap.from('.vertical-nav__link', {
-        duration: 1,
-        opacity: 0,
-        x: 100,
-        stagger: 0.25,
-        ease: 'power3',
-        delay: 1.5,
-    });
-
     // Mobile burger
     gsap.from('.header-top__burger', {
         duration: 1,
@@ -186,7 +176,7 @@ export default function setAnimations() {
         gsap.from(caption, {
             scrollTrigger: {
                 trigger: caption,
-                start: 'top-=400 center',
+                start: 'top-=200 center',
             },
             yPercent: 100,
             opacity: 0,
@@ -212,6 +202,7 @@ export default function setAnimations() {
         });
     });
 
+    // Projects icons
     const projectIcons = gsap.utils.toArray('.project__github');
     projectIcons.forEach(icon => {
         gsap.from(icon, {
@@ -224,6 +215,19 @@ export default function setAnimations() {
             delay: 1,
             druation: 1,
         });
+    });
+
+    // Show more button
+    gsap.from('.projects__load-more', {
+        scrollTrigger: {
+            trigger: '.projects__load-more',
+            start: 'top-=350 center',
+        },
+        markers: true,
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        ease: 'power3',
     });
 
     // ==== CONTACT ====
@@ -259,5 +263,16 @@ export default function setAnimations() {
         duration: 1,
         delay: 3,
         stagger: 0.5,
+    });
+}
+
+export function animateNewProjects(index) {
+    const loadedProjects = gsap.utils.toArray('.project--loaded');
+    const newProjects = loadedProjects.slice(index);
+    gsap.from(newProjects, {
+        opacity: 0,
+        y: 200,
+        duration: 1,
+        stagger: 1.5,
     });
 }

@@ -9,11 +9,60 @@ import './styles/main.scss';
 
 // Animations
 import setAnimations from './animations';
+import { animateNewProjects } from './animations';
 setAnimations();
 
 // Assets
 import assets from './assets';
 assets();
+
+// Projects
+import projects from './projects.json';
+const container = document.querySelector('[data-projects-container]');
+const loadMore = document.querySelector('[data-load-more]');
+let number = 0;
+let loaded = 0;
+
+function loadMoreProjects(amount) {
+    if (number > amount) return;
+    for (let i = number; i < amount; i++) {
+        const project = projects[i];
+        if (project === undefined) return;
+        const projectEl = document.createElement('div');
+        projectEl.classList.add('project', 'project--loaded');
+        projectEl.innerHTML = `
+            <div class="project__info">
+                <div class="project__title-container">
+                    <h2 class="project__title">
+                        <a href="${project.link}">${project.title}</a>
+                    </h2>
+                    <a class="project__github" target="_blank" href="${project.github}" aria-label="github">
+                        <i class="fa-brands fa-github project__link-img"></i>
+                    </a>
+                </div>
+                <figure class="project__image-container">
+                    <img data-${project.imgDatasetName} alt="${project.title}" class="project__image">
+                    <figcaption class="project__image-caption">
+                        ${project.languages}
+                    </figcaption>
+                </figure>
+            </div>
+            <p class="project__description">
+                ${project.description}
+            </p>
+        `;
+
+        container.appendChild(projectEl);
+        number++;
+    }
+}
+
+loadMore.addEventListener('click', () => {
+    loadMoreProjects(projects.length);
+    assets();
+    animateNewProjects(loaded);
+    loaded += projects.length;
+});
 
 // Mobile menu
 const button = document.querySelector('[data-burger]');

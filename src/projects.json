@@ -1,0 +1,10 @@
+[
+    {
+        "title": "EXPENSES CHART",
+        "link": "./projects/expenses-chart-component/",
+        "github": "https://github.com/matibox/expenses-chart-component",
+        "languages": "HTML, SASS, JS",
+        "description": "This project features a chart. It dynamically fetches the data from the JSON file which was provided by frontendmentor.io. The current day's bar is highlighted. When you hover over the bars, it shows the amount spent on each day.",
+        "imgDatasetName": "project-expenses-chart"
+    }
+]

@@ -6,8 +6,8 @@ import AboutPhoto from './assets/AboutPhoto.png';
 import Wave from './assets/Wave.png';
 import ProjectDesign from './assets/ProjectDesign.png';
 import ProjectTicTacToe from './assets/ProjectTicTacToe.png';
-import ProjectGladkobot from './assets/ProjectGladkobot.png';
 import ProjectTodo from './assets/ProjectTodo.png';
+import ProjectExpensesChart from './assets/ProjectExpensesChart.png';
 import TiltDark from './assets/TiltDark.png';
 
 export default function assets() {
@@ -20,8 +20,8 @@ export default function assets() {
         { assetName: Wave, element: 'wave-transition' },
         { assetName: ProjectDesign, element: 'project-design' },
         { assetName: ProjectTicTacToe, element: 'project-tictactoe' },
-        // { assetName: ProjectGladkobot, element: 'project-gladkobot' },
         { assetName: ProjectTodo, element: 'project-todo-app' },
+        { assetName: ProjectExpensesChart, element: 'project-expenses-chart' },
         { assetName: TiltDark, element: 'tilt-dark-transition' },
     ];
 

@@ -213,6 +213,12 @@ header {
     & > *:not(.transition) {
         padding-inline: clamp(2.5rem, 7.5vw, 13rem);
     }
+
+    &__load-more {
+        align-self: center;
+        padding-inline: 0 !important;
+        cursor: pointer;
+    }
 }
 
 .contact {
