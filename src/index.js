@@ -34,7 +34,7 @@ function loadMoreProjects(amount) {
             <div class="project__info">
                 <div class="project__title-container">
                     <h2 class="project__title">
-                        <a href="${project.link}">${project.title}</a>
+                        <a href="${project.link}" target="_blank">${project.title}</a>
                     </h2>
                     <a class="project__github" target="_blank" href="${project.github}" aria-label="github">
                         <i class="fa-brands fa-github project__link-img"></i>
