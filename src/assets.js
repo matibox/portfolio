@@ -8,6 +8,7 @@ import ProjectDesign from './assets/ProjectDesign.png';
 import ProjectTicTacToe from './assets/ProjectTicTacToe.png';
 import ProjectTodo from './assets/ProjectTodo.png';
 import ProjectExpensesChart from './assets/ProjectExpensesChart.png';
+import ProjectEcommerce from './assets/ProjectEcommerce.png';
 import TiltDark from './assets/TiltDark.png';
 
 export default function assets() {
@@ -22,6 +23,7 @@ export default function assets() {
         { assetName: ProjectTicTacToe, element: 'project-tictactoe' },
         { assetName: ProjectTodo, element: 'project-todo-app' },
         { assetName: ProjectExpensesChart, element: 'project-expenses-chart' },
+        { assetName: ProjectEcommerce, element: 'project-ecommerce' },
         { assetName: TiltDark, element: 'tilt-dark-transition' },
     ];
 

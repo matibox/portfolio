@@ -1,9 +1,17 @@
 [
     {
-        "title": "EXPENSES CHART",
+        "title": "DESIGN 2021.",
+        "link": "./projects/design-in-2021/",
+        "github": "https://github.com/matibox/projekt-witryny",
+        "languages": "HTML, SCSS, JS, GSAP",
+        "description": "I made this website at the end of 2021. It was for a school project. I wanted to try GSAP - an animation library for JS, especially the new scroll trigger option. The site is fully responsive and features the bulkiest trends in web design in 2021 and some cool scroll animations. It also includes a horizontal scroll section.",
+        "imgDatasetName": "project-design"
+    },
+    {
+        "title": "EXPENSES CHART.",
         "link": "./projects/expenses-chart-component/",
         "github": "https://github.com/matibox/expenses-chart-component",
-        "languages": "HTML, SASS, JS",
+        "languages": "HTML, SCSS, JS",
         "description": "This project features a chart. It dynamically fetches the data from the JSON file which was provided by frontendmentor.io. The current day's bar is highlighted. When you hover over the bars, it shows the amount spent on each day.",
         "imgDatasetName": "project-expenses-chart"
     }
